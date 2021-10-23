@@ -1,5 +1,5 @@
 <?php
-$upload_dir = 'D:\\php-uploadfiles\\';
+$upload_dir = 'path to files directory';
 $upload_file = basename($_FILES['uploadedFile']['name']);
 $upload_path = $upload_dir . $upload_file;
 $api_url = "test-forum-api.herokuapp.com/api/file/";
@@ -37,9 +37,9 @@ if (move_uploaded_file($_FILES['uploadedFile']['tmp_name'], $upload_path)) {
 
 	print_r($curl_result);
 
-} /*else {
+} else {
 	echo "Возможная атака с помощью файловой загрузки!\n";
-}*/
+}
 
 
 echo 'Некоторая отладочная информация:';
